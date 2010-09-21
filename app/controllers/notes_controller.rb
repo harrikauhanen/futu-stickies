@@ -40,7 +40,7 @@ class NotesController < ApplicationController
   # POST /notes
   # POST /notes.xml
   def create
-    find_primes
+    # find_primes
     
     @note = Note.new(params[:note])
 
