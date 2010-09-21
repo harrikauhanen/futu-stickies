@@ -40,6 +40,8 @@ class NotesController < ApplicationController
   # POST /notes
   # POST /notes.xml
   def create
+    find_primes
+    
     @note = Note.new(params[:note])
 
     respond_to do |format|
@@ -80,4 +82,26 @@ class NotesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  
+  private
+
+  # http://julesberman.blogspot.com/2008/04/generating-prime-numbers-in-ruby-python.html
+  def find_primes
+    state = Numeric.new
+    print "2,3,"
+    (4..50000).each do
+       |i|
+       (2..(Math.sqrt(i).ceil)).each do
+          |thing|
+          state = 1
+          if (i.divmod(thing)[1] == 0)
+             state = 0
+             break
+          end
+       end
+       print "#{i}\," unless (state == 0)
+    end
+  end
+  
 end
