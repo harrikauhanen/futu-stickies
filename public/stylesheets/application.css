@@ -1,0 +1,44 @@
+.note {
+  position: relative;
+  float: left;
+  width: 180px;
+  height: 180px;
+  list-style: none;
+  margin: 15px;
+  padding: 10px;
+  text-align: center;
+  -moz-box-shadow: 2px 2px 5px #666;
+  -webkit-box-shadow: 2px 2px 5px #666;
+}
+
+.yellow {
+  background-image: url('/images/note-yellow.png');
+}  
+
+.green {
+    background-image: url('/images/note-green.png');
+}
+
+.purple {
+  background-image: url('/images/note-purple.png');
+}
+
+.note p {
+  font-family: 'Reenie Beanie', arial, serif;
+  font-size: 300%;
+  line-height: 1.0;
+  padding: 10px 0;
+  margin: 0;
+  height: 140px;
+  overflow: hidden;
+}
+
+.note span {
+  position: absolute;
+  display: block;
+  width: 180px;
+  bottom: 5px;
+  text-align: right;
+  color: #666;
+  font-size: 75%;
+}

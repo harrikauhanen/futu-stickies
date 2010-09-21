@@ -44,7 +44,7 @@ class NotesController < ApplicationController
 
     respond_to do |format|
       if @note.save
-        format.html { redirect_to(@note, :notice => 'Note was successfully created.') }
+        format.html { redirect_to(notes_url, :notice => 'Note was successfully created.') }
         format.xml  { render :xml => @note, :status => :created, :location => @note }
       else
         format.html { render :action => "new" }
@@ -60,7 +60,7 @@ class NotesController < ApplicationController
 
     respond_to do |format|
       if @note.update_attributes(params[:note])
-        format.html { redirect_to(@note, :notice => 'Note was successfully updated.') }
+        format.html { redirect_to(notes_url, :notice => 'Note was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

@@ -15,6 +15,13 @@
     <%= f.label :text %><br />
     <%= f.text_field :text %>
   </div>
+  
+  <div class="field">
+    <%= f.label :color %><br />
+    <%= f.collection_select(:color, Note::COLORS, :to_s, :to_s) %>
+  </div>
+  
+  
   <div class="actions">
     <%= f.submit %>
   </div>
