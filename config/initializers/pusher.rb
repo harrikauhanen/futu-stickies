@@ -1,3 +1,5 @@
-Pusher.app_id = '2118'
-Pusher.key = '8367f6485eff2c7ee29e'
-Pusher.secret = '99e5fe5d621733871da2'
+# I updated this after the demo so that demo channel cannot be used elsewhere
+
+Pusher.app_id = ENV['PUSHER_APP_ID']
+Pusher.key = ENV['PUSHER_KEY']
+Pusher.secret = ENV['PUSHER_SECRET']
